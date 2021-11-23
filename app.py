@@ -48,7 +48,7 @@ def forge():
 
     name = 'Wu Han'
     movies = [
-        {'title': 'My Neighbor Totoro1', 'year': '1988'},
+        {'title': 'My Neighbor Totoro', 'year': '1988'},
         {'title': 'Dead Poets Society', 'year': '1989'},
         {'title': 'A Perfect World', 'year': '1993'},
         {'title': 'Leon', 'year': '1994'},
@@ -69,12 +69,9 @@ def forge():
     db.session.commit()
     click.echo('Done!')
 
-
-
 @app.route("/user/<name>")
 def user_page(name):
     return "User's :%s " % escape(name)
-
 
 if __name__ == '__main__':
     app.run()
