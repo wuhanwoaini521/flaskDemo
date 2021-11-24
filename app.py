@@ -121,8 +121,6 @@ def delete(movie_id):
     flash("Item deleted.")
     return redirect(url_for("index")) # 重定向回主页
 
-
-
 @app.route("/user/<name>")
 def user_page(name):
     return "User's :%s " % escape(name)
